@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/7d4b481114.js" crossorigin="anonymous"></script>
+	<!--[if lt IE 9]>
+	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+
+
+	<!-- slicknav links  -->
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+	</script>
+
+
+
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/carousel.css">
+	<link rel="shortcut icon" href="images/favicon.jpeg">
+	<title>Brittany's Video Game Design Portfolio</title>
+	
+</head>
+<body>
+	<header>
+		<div>
+			<h2>Brittany's Portfolio</h2>
+		</div>
+	</header>
+
+	<nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<h1></h1>
+
+	<main>
+		<nav id="nav_list">
+			<aside id="asideleft">
+				<h3>Additional resources</h3>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/brittany-iversen-6b894a251/" target="_blank">My LinkedIn</a></li>
+					<li><a href="https://www.udemy.com/courses/search/?q=video%20game%20design" target="_blank">Udemy - Video Game Design Courses</a></li>
+					<li><a href="https://www.reddit.com/r/gamedesign/" target="_blank">Reddit - Game Design Community</a></li>
+					<li><a href="https://www.gamecareerguide.com/" target="_blank">GameCareerGuide - Game Design Career Advice</a></li>
+					<li><a href="https://www.youtube.com/user/ExtraCreditz" target="_blank">Extra Credits - YouTube Channel on Game Design</a></li>
+				</ul>
+			</aside>
+		</nav>
+
+		<section>
+			<div class="container">
+				<div class="imagecarousel">
+					<div class="image fadeout"><img src="images/projects/TheLodgeBuild.PNG" alt=""></div>
+					<div class="image fadeout"><img src="images/projects/house.png" alt=""></div>
+		
+
+					<!-- Font Awesome Next and Prev Buttons -->
+					<div class="prev"><i onclick="showImage(-1)" class="fa-solid fa-square-caret-left"></i></div>
+					<div class="next"><i onclick="showImage(1)" class="fa-solid fa-square-caret-right"></i></div>
+				</div>
+			</div>
+			<div class="dots">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				
+				
+			</div>
+		</section>
+
+		
+
+	</main>
+	<div>
+        <button onclick="topFunction()" id="cornerBtn" title="Go to top">Return To Top</button>
+    </div>
+	<footer>
+		<p>&copy; <span id="copyrightyear"></span> Brittany's Video Game Design Portfolio</p>
+	</footer>
+
+	<script>
+        const d = new Date();
+        document.getElementById('copyrightyear').innerHTML = d.getFullYear();
+    </script>
+</body>
+</html>
+
+<script src="js/carousel.js"></script>
+<script src="js/scrolltotop.js"></script>

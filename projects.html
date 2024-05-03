@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Portfolio showcasing Brittany's video game design projects">
+
+	<!--[if lt IE 9]>
+	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+
+
+	<!-- slicknav links  -->
+	<link rel="stylesheet" href="styles/slicknav.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+		});
+	</script>
+
+
+
+	<link rel="stylesheet" href="styles/normalize.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/projects.css">
+	<link rel="shortcut icon" href="images/favicon.jpeg">
+	<title>Projects</title>
+	
+</head>
+<body>
+	<header>
+		<div>
+			<h2>Brittany's Portfolio</h2>
+		</div>
+	</header>
+
+	<nav id="mobilemenu"></nav>
+	<nav id="nav_menu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<img src="images/projects/house.png" alt="">
+		<img src="images/projects/Screenshot 2024-04-17 at 8.27.15 PM.png" alt="">
+		<img src="images/projects/TheLodgeBuild.PNG" alt="">
+		
+	</main>
+	<div>
+        <button onclick="topFunction()" id="cornerBtn" title="Go to top">Return To Top</button>
+    </div>
+	<footer>
+		<p>&copy; <span id="copyrightyear"></span> Brittany's Video Game Design Portfolio</p>
+	</footer>
+
+	<script>
+        const d = new Date();
+        document.getElementById('copyrightyear').innerHTML = d.getFullYear();
+    </script>
+</body>
+</html>
+<script src="js/scrolltotop.js"></script>

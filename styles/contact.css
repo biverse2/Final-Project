@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main p {
+    margin: .1em;
+    font-size: 150%;
+    order: 0; /* Set order to 0 to keep the text in the original position */
+}
+
+main li {
+    margin: .5em;
+    font-size: 150%;
+    max-width: 50%;
+}

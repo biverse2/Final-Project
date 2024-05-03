@@ -1,0 +1,254 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-image: linear-gradient(to bottom right, rgb(157, 93, 210), white);
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 100%;
+    max-width: 1200px;
+    border: 3px solid rgb(157, 93, 210);
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 3px 3px 10px 2px grey;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 3px solid rgb(157, 93, 210);
+    padding: .5em;
+}
+header div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header h2 {
+    font-size: 250%;
+    margin-bottom: 5px;
+    font-style:initial;
+    color: rgb(157, 93, 210);
+}
+
+#nav_menu {
+    border-bottom: 3px solid rgb(157, 93, 210);
+    background-color: rgb(157, 93, 210);
+}
+#nav_menu ul {
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#nav_menu li {
+    width: 20%;
+}
+#nav_menu a {
+    text-align: center;
+    display: block;
+    padding: 1em 0;
+    background-color: rgb(157, 93, 210);
+    font-weight: bold;
+    color: white;
+}
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+#nav_menu ul ul li a {
+    text-align: left;
+    padding-left: .25em;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu a:hover {
+    background-color: lavender;
+    color: black;
+}
+
+#nav_list h2 {
+    margin-bottom: .5em;
+}
+#nav_list ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+#nav_list li {
+    width: 90%;
+    border: 1px solid rgb(157, 93, 210);
+    border-radius: 5px;
+}
+#nav_list a {
+    display: block;
+    background-color: lavender;
+    padding: .5em;
+    color: black;
+}
+#nav_list a:hover {
+    background-color: rgb(157, 93, 210);
+    color: white;
+}
+
+#cornerBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    padding: 1em 2em;
+    background-color: rgba(60, 62, 173, 0.411);
+    border: rgba(136, 130, 178, 0.411);
+    border-radius: 10px;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+  }
+  #cornerBtn:hover {
+    background-color: black;
+    color: rgb(169, 161, 187);
+    border: 2px ridge goldenrod;
+  }
+
+h1 {
+   text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+section a:link, section a:visited {
+    color: rgb(96, 60, 146);
+}
+section a:hover, section a:active {
+    color: rgb(157, 93, 210);
+    text-decoration: underline;
+}
+
+aside a {
+    font-weight: bold;
+}
+
+aside a:link, aside a:visited {
+    color: rgb(157, 93, 210);
+}
+aside a:hover, aside a:active {
+    color: rgb(96, 60, 146);
+}
+
+aside h3 {
+    color: rgb(96, 60, 146);
+    text-align: center;
+    padding-bottom: .25em;
+}
+
+#asideleft li {
+    line-height: 140%;
+}
+
+main {
+    display: flex;
+    gap: 1em;
+}
+section {
+    max-width: 70%;
+}
+#nav_list {
+    max-width: 25%;
+    margin-bottom: 2em;
+}
+#asideright {
+    max-width: 25%;
+}
+#asideright p {
+    padding-right: .75em;
+}
+
+
+main h2 {
+    margin: 0 0 2em;
+}
+section h3 {
+    padding-bottom: .25em;
+}
+
+main p {
+    margin: 0 0 2em;
+}
+blockquote {
+    margin: 1em 3.5em 2em;
+    padding: 1em;
+    background-color: rgb(223, 232, 244);
+    border-radius: 5px;
+    border: 1px solid rgb(157, 93, 210);
+    box-shadow: 3px 3px 10px 2px lavender;
+}
+footer {
+    background-color: rgb(157, 93, 210);
+}
+footer p {
+    padding: 25px 0;
+    color: white;
+    text-align: center;
+    font-size: 85%;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    #mobilemenu {
+        display: block;
+    }
+    .slicknav_menu {
+        background-color: rgb(157, 93, 210);
+    }
+    #nav_menu {
+        display: none;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    section, #nav_list, #asideright {
+        max-width: 95%;
+    }
+    #nav_list {
+        order: 2;
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 479px) {
+    header {
+        flex-direction: column;
+    }
+}
